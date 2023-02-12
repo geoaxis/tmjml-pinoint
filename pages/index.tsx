@@ -71,11 +71,11 @@ const [jsonInput, setJsonInput] = useState('{ "people": ["a", "b"] }')
 `);
 
 
-  const onChange = useCallback((value, viewUpdate) => {
+  const onChange = useCallback((value:string, viewUpdate:any) => {
     setInput(value);
   }, []);
 
-  const onChangeJson = useCallback((value, viewUpdate) => {
+  const onChangeJson = useCallback((value:string, viewUpdate:any) => {
     setJsonInput(value);
   }, []);
 

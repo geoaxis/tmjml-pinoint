@@ -1,15 +1,12 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
-import mjml2html from 'mjml'
+import mjml2html  from 'mjml'
+import type {MJMLParseResults} from 'mjml-core'
 
 
 
 interface Data {
-  output: Html | Error,
-}
-
-interface Html {
-  html: string
+  output: MJMLParseResults | undefined | Error,
 }
 
 interface Error {
@@ -46,6 +43,5 @@ export default function handler(
   } else {
     res.status(501);
   }
-
 
 }
